@@ -44,7 +44,7 @@ const RegisterEvent = () => {
     },
   });
 
-  const onSubmit = (values) => {
+  const onSubmit = () => {
     // console.log("Form Submitted ✅", values);
     form.reset()
     redirect("")
