@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 const Sponsors = () => {
   const premierSponsors = [
     {
@@ -32,24 +32,41 @@ const Sponsors = () => {
   ];
 
   const partners = [
+  
     {
-      name: "IIT Indore",
-      logo: "https://upload.wikimedia.org/wikipedia/en/3/3c/IIT_Indore_Logo.png",
+      name: "DAVV Indore",
+      logo: "DVV",
     },
     {
-      name: "SVVV Indore",
-      logo: "https://svvv.edu.in/images/logo.png",
+      name: "AITR Indore",
+      logo: "AITR",
+    },
+    {
+      name: "CDGI Indore",
+      logo: "CDGI",
     },
     {
       name: "Medicaps University",
-      logo: "https://upload.wikimedia.org/wikipedia/en/c/c1/Medicaps_University_logo.png",
+      logo: "medicaps",
     },
-    {
-      name: "DAVV Indore",
-      logo: "https://upload.wikimedia.org/wikipedia/en/3/37/Devi_Ahilya_Vishwavidyalaya_logo.png",
-    },
+    // {
+    //   name: "SDBC Indore",
+    //   logo: "SDBC",
+    // },
+    // {
+    //   name: "IIST Indore",
+    //   logo: "IIST",
+    // },
+    // {
+    //   name: "IIT Indore",
+    //   logo: "IIT",
+    // },
+    // {
+    //   name: "SVVV Indore",
+    //   logo: "SVVV",
+    // },
   ];
-
+  
   return (
     <section id="sponsers" className="py-20 relative overflow-hidden">
       {/* Background gradient */}
@@ -69,7 +86,7 @@ const Sponsors = () => {
           </p>
         </div>
 
-        {/* Premier Sponsors */}
+        {/* Premier Sponsors
         <div>
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Premier Sponsors
@@ -88,9 +105,9 @@ const Sponsors = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        {/* Supporting Sponsors */}
+        {/* Supporting Sponsors
         <div>
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Supporting Sponsors
@@ -109,7 +126,7 @@ const Sponsors = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Partners */}
         <div>
@@ -122,9 +139,11 @@ const Sponsors = () => {
                 key={index}
                 className="flex flex-col justify-center items-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:scale-105 transition-transform shadow-md text-center space-y-4"
               >
-                <img
-                  src={partner.logo}
+                <Image
+                  src={`/images/${partner.logo}.png`}
                   alt={partner.name}
+                  height={50}
+                  width={50}
                   className="h-12 sm:h-14 object-contain"
                 />
                 <span className="text-white font-medium">{partner.name}</span>

@@ -5,58 +5,46 @@ import Link from 'next/link';
 const EventsSection = () => {
   const events = [
     {
-      type: "Meetup",
-      title: "React Developers Meetup",
-      description: "Monthly meetup for React developers to share knowledge, discuss latest trends, and network.",
-      date: "Feb 28, 2025",
-      time: "6:00 PM EST",
-      location: "Virtual",
-      attendees: "150+",
+      type: "Online",
+      title: "Grow on LinkedIn",
+      description: "A comprehensive session to help you build your personal brand, grow your network, and unlock career opportunities using LinkedIn.",
+      date: "27, September 2025",
+      time: "TBD",
+      location: "Online",
+      attendees: "500+ students",
       price: "Free",
       color: "from-blue-500 to-cyan-500",
       bgColor: "from-blue-600/20 to-cyan-600/20",
       borderColor: "border-blue-500/30 hover:border-blue-500/50"
     },
     {
-      type: "Hackathon",
-      title: "AI Innovation Hackathon",
-      description: "48-hour hackathon focused on building innovative AI solutions for real-world problems.",
-      date: "Mar 8-10, 2025",
-      time: "9:00 AM EST",
-      location: "Hybrid",
-      attendees: "200+",
-      price: "Free",
-      color: "from-green-500 to-emerald-500",
-      bgColor: "from-green-600/20 to-emerald-600/20",
-      borderColor: "border-green-500/30 hover:border-green-500/50"
-    },
-    {
-      type: "Workshop",
-      title: "UX/UI Design Masterclass",
-      description: "Learn advanced design principles and hands-on techniques from industry experts.",
-      date: "Mar 5, 2025",
-      time: "2:00 PM EST",
-      location: "In-Person",
-      attendees: "80+",
-      price: "$25",
-      color: "from-pink-500 to-rose-500",
-      bgColor: "from-pink-600/20 to-rose-600/20",
-      borderColor: "border-pink-500/30 hover:border-pink-500/50"
-    },
-    {
-      type: "Meetup",
-      title: "Startup Founders Circle",
-      description: "Connect with fellow entrepreneurs, share experiences, and discuss challenges and solutions.",
-      date: "Mar 12, 2025",
-      time: "7:00 PM EST",
-      location: "Virtual",
-      attendees: "120+",
+      type: "Offline",
+      title: "October Community Meetup",
+      description: "An in-person networking and engagement event tailored for student innovators and sponsors. Open for sponsor branding & collaboration.",
+      date: "October 2025",
+      time: "TBD",
+      location: "TBD (Offline)",
+      attendees: "Let’s Discuss!",
       price: "Free",
       color: "from-orange-500 to-red-500",
       bgColor: "from-orange-600/20 to-red-600/20",
       borderColor: "border-orange-500/30 hover:border-orange-500/50"
+    },
+    {
+      type: "Workshop",
+      title: "Hands-on with Agentic AI Tools",
+      description: "Dive into hands-on exploration of the latest agentic AI tools and how they can be applied to solve real-world problems.",
+      date: "October 2025",
+      time: "TBD",
+      location: "In-Person",
+      attendees: "50–70 students",
+      price: "Free",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-green-600/20 to-emerald-600/20",
+      borderColor: "border-green-500/30 hover:border-green-500/50"
     }
   ];
+  
 
   return (
     <section id="events" className="py-20 relative overflow-hidden">
@@ -74,12 +62,14 @@ const EventsSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Featured Event */}
+            { /*
           <div className="lg:col-span-2">
             <div className="relative bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl p-8 border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-[1.02] overflow-hidden">
+             
               <div className="absolute top-0 right-0 bg-gradient-to-l from-yellow-400 to-orange-400 text-black px-4 py-2 rounded-bl-2xl font-semibold text-sm">
                 FEATURED
               </div>
-              <div className="grid md:grid-cols-2 gap-8 items-center">
+               <div className="grid md:grid-cols-2 gap-8 items-center"> 
                 <div className="space-y-6">
                   <div className="inline-flex items-center space-x-2 bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-sm">
                     <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
@@ -121,6 +111,7 @@ const EventsSection = () => {
               </div>
             </div>
           </div>
+            */}
 
           {/* Regular Events */}
           {events.map((event, index) => (
@@ -130,7 +121,7 @@ const EventsSection = () => {
                   <span className={`bg-gradient-to-r ${event.color} text-white px-3 py-1 rounded-full text-sm font-semibold`}>
                     {event.type}
                   </span>
-                  <span className="text-gray-300 text-sm">{event.attendees} registered</span>
+                  {/* <span className="text-gray-300 text-sm">{event.attendees} registered</span> */}
                 </div>
                 
                 <h3 className="text-xl font-bold text-white">{event.title}</h3>
